@@ -1,0 +1,86 @@
+@import "../variables";
+
+.planCard{
+  border: 1px solid hsl(0, 0, 90%);
+  background-color: white;
+  flex: 1;
+  max-width: 20%;
+  &__title{
+    background-color: $primaryColor;
+    color: $backgroundColor;
+    text-align: center;
+    padding: 0 .5em;
+    padding-top: 1em;
+
+    .title__heading {
+      color: $textColor;
+      text-transform: uppercase;
+      border-bottom: 1px solid $textColor;
+      padding-bottom: 1em;
+      max-width: 80%;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .title__summary{
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .title__price{
+      font-size: 300%;
+      font-weight: 700;
+      margin: 0;
+      line-height: 90%;
+      &::first-letter{
+        font-size: 40%;
+        vertical-align: super;
+      }
+    }
+    .title__conditions{
+      font-weight: 700;
+      font-size: 80%;
+    }
+
+    .title__link{
+      background: linear-gradient(
+        $primaryColor 0%,
+        $secondaryColor 100%);
+      padding: 0.5em 1em;
+      color: $backgroundColor;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transform: translateY(0.78em);
+      border-radius: 5px;
+      &--caps{
+        text-transform: uppercase;
+      }
+    }
+  }
+  .planCard__features {
+    background-color: #fff;
+    padding: 0 .5em;
+    .features__heading {
+      font-size: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .features__list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .list__item{
+        margin: .5em 0;
+        padding: 0;
+        font-size: 80%;
+        color:hsl(0, 0, 30%)
+      }
+    }
+  }
+  .feature__getfrom{
+    color:hsl(0, 0, 30%);
+    font-size: 80%;
+  }
+}
