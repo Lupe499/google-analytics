@@ -44,8 +44,8 @@
 
     .title__link{
       background: linear-gradient(
-        $primaryColor 0%,
-        $secondaryColor 100%);
+        hsl(120, 41%, 40%) 0%,
+        hsl(120, 30%, 51%) 100%);
       padding: 0.5em 1em;
       color: $backgroundColor;
       text-decoration: none;
