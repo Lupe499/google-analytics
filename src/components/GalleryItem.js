@@ -7,7 +7,10 @@ function GalleryItem({img, copy, ctaLink, ctaCopy}) {
               <img src={img} alt="" className="galleryItem__image"/>
               <div className="galleryItem__content">
                 <p className="galleryItem__copy">{copy}</p>
-                <a href={ctaLink} className="galleryItem__CTA">{ctaCopy}</a>
+                <a href={ctaLink} className="galleryItem__CTA" 
+                // eslint-disable-next-line
+                onClick={gtag("event", "cta", ctaLink)}
+                >{ctaCopy}</a>
               </div>
             </div>
     

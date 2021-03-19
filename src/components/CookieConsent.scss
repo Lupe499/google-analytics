@@ -1,0 +1,110 @@
+@import "../variables";
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0, 60%, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  display: grid;
+  
+}
+
+
+.cookieConsentModal{
+  place-self: center;
+  width: 40vw;
+  height: 50vh;
+  background-color: $backgroundColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    background-color: $primaryColor;
+    color: $backgroundColor;
+    padding: 1em;
+    h1{
+      margin: 0;
+    }
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 2;
+    padding: 1em;
+  }
+
+  table {
+    flex-grow: 1;
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    display: none;
+    &:checked + .consentToggle{
+      background-color: rgba(36, 148, 240, 0.609);
+      
+      &::after{
+        transform: 
+        translateX(1.55em)
+        translateY(1px);
+      }
+    }
+    &:disabled + .consentToggle {
+      opacity: 0.5;
+    }
+    &:disabled + .consentToggle:after{
+      opacity: 0.5;
+    }
+  }
+  .consentToggle {
+    display: inline-block;
+    width: 2.5em;
+    height: 1em;
+    border-radius: .5em;
+    background-color: lightgrey;
+    transition: background-color 200ms ease;
+    &::after{
+      transform: 
+      translateY(1px)
+      translateX(1px);
+      display: block;
+      content: "";
+      width: 0.9em;
+      height: 0.9em;
+      border-radius: 50%;
+      background-color: white;
+      transition: transform 200ms ease;
+    }
+  }
+
+  tr td:first-of-type{
+    width: 30%;
+    text-align: center;  
+  }
+    .content__buttons {
+      display: flex;
+      justify-content: space-around;
+      flex-grow: 1;
+      .buttons__cookie{
+        border: none;
+        background-color: lightgrey;
+        border-radius: 50px;
+        height: 3em;
+        width: 8em;
+      }
+      .buttons__highlight{
+        font-weight: 700;
+        background-color: $primaryColor;
+        color: white;
+      }
+    }
+}
+
