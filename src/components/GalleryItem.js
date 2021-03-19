@@ -9,7 +9,7 @@ function GalleryItem({img, copy, ctaLink, ctaCopy}) {
                 <p className="galleryItem__copy">{copy}</p>
                 <a href={ctaLink} className="galleryItem__CTA" 
                 // eslint-disable-next-line
-                onClick={gtag("event", "select_content", { "content_type": ctaLink })}
+                onClick={() => gtag("event", "select_content", { "content_type": ctaLink })}
                 >{ctaCopy}</a>
               </div>
             </div>
